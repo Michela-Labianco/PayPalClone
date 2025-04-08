@@ -1,0 +1,898 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: "Baloo Da 2", cursive;
+}
+
+html{
+    font-family: 62.5%;
+}
+.blue-btn{
+    width: 30rem;
+    height: 4rem;
+    background-color: #036bb1;
+    color: #fff;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.logo{
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.p-1{
+    font-size: 4.5rem;
+    margin-right: 1rem;
+    position: relative; /*so the z-index will work*/
+    z-index: 10;
+}
+.p-2{
+    font-size: 4.5rem;
+    color: #bbb;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+}
+
+/* .front-page{
+    display: none;
+} */
+
+.section-1{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to top, rgba(38,38,38,0.7), rgba(38,38,38,0.6)), url(images/bg.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.navbar-wrapper{
+    width: 100%;
+    height: 8rem;
+    border-bottom: 0.1rem solid #aaa;
+    display: flex;
+    justify-content: center;
+}
+.navbar{
+    width: 90rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list{
+    display: flex;
+}
+.nav-list-item{
+    height: 8rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    transition: border-bottom 0.1s;
+}
+.nav-list-item:hover{ /*white line at the bottom*/
+    border-bottom: 0.2rem #fff solid;
+}
+
+.nav-list-link{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.nav-list-link i{
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+/* .nav-list-item:hover .nav-list-link i{
+    transform: rotateZ(180deg);
+} */
+
+.navbar-btn{
+    width: 7rem;
+    padding: 0.4rem;
+    margin: 0.3rem;
+    border-radius: 3rem;
+    border: 0.1rem solid #aaa;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.navbar-btn:nth-child(1){
+    background-color: transparent;
+    color: #fff;
+}
+.navbar-btn:nth-child(2){
+    background-color: #fff;
+    color: #262626;
+}
+.banner{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+}
+.banner-heading{
+    font-size: 6rem;
+    font-weight: 300;
+    color: #fff;
+}
+.banner-prgh{
+    font-size: 1.8rem;
+    width: 60%;
+    color: #fff;
+    font-weight: lighter;
+    text-shadow: 0.10rem 0.20rem #000;
+    letter-spacing: 0.1rem;
+    margin: 0 auto 3rem auto; /*to place it in the center*/
+}
+
+.dropdown-menu{
+    width: 100%;
+    height: 20rem;
+    background: linear-gradient(to right, #066399, #2f8fdf, #066399);
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    z-index: 100;
+    padding-left: 18rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    visibility: hidden;
+}
+.nav-dropdown-item{
+    width: 25rem;
+    margin: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-heading{
+    display: none;
+    visibility: hidden;
+}
+.menu{
+    display: none;
+    visibility: hidden;
+}
+.nav-dropdown-link-1{
+    font-size: 1.4rem;
+    color: #fff;
+}
+.nav-dropdown-link-2{
+    font-size: 1rem;
+    color: #fff;
+}
+
+.section-2{
+    width: 100%;
+    padding: 10rem 0 15rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-wrapper{
+    display: flex;
+}
+.section-heading{
+    font-size: 3rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.section-2-service{
+    width: 25rem;
+    text-align: center;
+    margin: 0 4rem;
+}
+.section-2-service i{
+    font-size: 5rem;
+    color: #229fe7;
+    margin: 2rem 0;
+}
+.service-heading{
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+.service-prgh{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.service-btn{
+    width: 15rem;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 3rem;
+    border: 0.1rem solid #036bb1;
+    font-size: 1.2rem;
+    color: #036bb1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.section-3{
+    width: 100%;
+    padding: 5rem 0; /*space inside of the section*/  
+    background: linear-gradient(to right, rgba(3, 33, 129, 0.9), rgba(9, 67, 153, 0.8), rgb(4, 32, 124, 0.9));
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    color: #fff;
+}
+.section-3-heading {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+}
+.features{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; /*on different lines*/
+}
+.feature {
+    width: calc(100% / 3); /* so each feature takes up one third of the width of the wrapper.*/
+    text-align: center;
+    padding: 0 5rem; /*space inside of the feature*/
+    margin-bottom: 5rem;
+}
+.feature-heading{
+    width: max-content; /*so the element will take up the width that is required to display the content*/
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0 auto 1rem; /* to center the elements: margin to auto on the left and right sides */
+}
+.feature-paragraph{
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+.section-4{
+    width: 100%;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-4-content{
+    display: flex;
+}
+.section-4-img-wrapper{
+    width: 50rem;
+}
+.section-4-img-wrapper img{
+    width: 100%;
+    opacity: 0.8;
+}
+.section-4-list{
+    width: 55%;
+    margin-top: 2rem;
+}
+.section-4-list-item{
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.number{
+    width: 3rem;
+    height: 3rem;
+    border: 0.1rem solid #555;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+.section-4-list-item a{
+    color: #036bb1;
+}
+.section-5{
+    width: 100%;
+}
+.section-5-top{
+    width: 100%;
+    background-color: #f3f7fa;
+    padding: 3rem 0;
+    text-align: center;
+}
+.section-5-top-heading{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+.footer{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0 3rem 0;
+}
+.footer-list img{
+    width: 3.8rem;
+    opacity: 0.6;
+}
+.footer-top{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem dotted #262626;
+    padding-bottom: 1rem;
+}
+.footer-list{
+    display: flex;
+    align-items: center;
+}
+.footer-list li{
+    margin-right: 2.5rem;
+}
+.footer-list a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #262626;
+}
+.copyright{
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+.login-page{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: none;
+}
+
+.login-page-content{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%); /*to center the element perfectly*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid #cfcfcf;
+    padding: 3rem;
+}
+.login-page-logo{
+    margin-bottom: 1.2rem;
+}
+.login-page-logo .p-1{
+    color: #064699;
+}
+.login-page-logo .p-2{
+    color: #3284f0;
+}
+.login-page-logo span:nth-child(3){
+    color: #064699;
+}
+.login-page-logo span:nth-child(4){
+    color: #3284f0;
+}
+.login-page-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-page-form input{
+    width: 30rem;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+.form-login-input{
+    padding: 0 1.5rem;
+    border: 0.1rem solid #777;
+    font-size: 1.3rem;
+}
+.form-login-btn{
+    background-color: #036bb1;
+    color: #fff;
+    border: 0.1rem solid #036bb1;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.form-login-link{
+    font-size: 1.2rem;
+    color: #229fe7;
+    margin: 1.2rem 0 1rem 0;
+}
+.login-page-form span{
+    width: 2rem;
+    font-size: 1.2rem;
+    color: #888;
+    margin: 1rem 0;
+    position: relative;
+}
+.login-page-form span::before{
+    content: "";
+    width: 13rem;
+    height: 0.1rem;
+    background-color: #888;
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+}
+
+.login-page-form span::after{
+    content: "";
+    width: 14rem;
+    height: 0.1rem;
+    background-color: #888;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+}
+
+.form-signup-btn{
+    background-color: #dbe8ec;
+    border: 0.1rem solid #dbe8ec;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #262626;
+    cursor: pointer;
+}
+
+.signup-page{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(112,112,112,0.9), rgba(255,255,255,0.8) 20%);
+    /*So the white color starts appearing after 20% of the transition.*/
+    /* display: flex; -> check script.js */
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.signup-page-top{
+    width: 80rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.signup-page-logo .p-2{
+    color: #229fe7;
+}
+.signup-page-top button{
+    width: 6rem;
+    padding: 0.7rem;
+    background-color: transparent;
+    border-radius: 3rem;
+    border: 0.1rem solid #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bolder;
+}
+.signup-page-content{
+    width: 80rem;
+    display: flex;
+    justify-content: space-between;
+}
+.singup-page-content-left{
+    width: 50%;
+    border-right: 0.1rem solid #b1b1b1;
+    padding: 3rem 3rem 3rem 0;
+}
+.img-left-wrapper{
+    display: flex;
+    margin-bottom: 5rem;
+}
+.img-left-wrapper img{
+    width: 10rem;
+    margin-right: 2rem;
+    border: 0.6rem solid #b1b1b1;
+    border-radius: 50%;
+}
+.singup-page-content-left h1{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.1;
+    color: #333;
+}
+.singup-page-content-right{
+    width: 50%;
+    padding: 3rem 0 3rem 3rem;
+    color: #555;
+}
+.singup-page-content-right h3{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.singup-page-content-right h4{
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.input-group{
+    display: flex;
+    margin: 1.5rem;
+}
+.input-group input[type="radio"]{
+    width: 6%;
+    margin-bottom: 3rem;
+}
+.option h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+.option p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-left: 2rem;
+}
+.singup-page-content-right p{
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1500px){
+    html{
+        overflow-x: hidden;
+    }
+    .navbar{
+        width: 80rem;
+    }
+    .section-2-service{
+        width: 20rem;
+    }
+    .features{
+        width: 95%;
+    }
+    .section-4-list{
+        width: 50%;
+    }
+    .section-4-img-wrapper img{
+        width: 95%;
+    }
+    .signup-page-top{
+        width: 70rem;
+    }
+}
+@media (max-width: 1400px){
+    .section-1{
+        height: 70vh;
+    }
+    .banner{
+        top: 35%;
+    }
+    .banner-prgh{
+        width: 70%;
+    }
+    .navbar{
+        width: 73rem;
+    }
+    .nav-list-item{
+        padding: 1rem;
+    }
+    .service-wrapper{
+        width: 90%;
+    }
+    .features{
+        width: 100%;
+    }
+    .section-4-content{
+        width: 90%;
+    }
+    .section-4-img-wrapper img{
+        width: 80%;
+        margin-left: 8rem;
+    }
+    .footer-top{
+        width: 80%;
+    }
+    .signup-page{
+        background: linear-gradient(to bottom, rgba(112,112,112,0.9), rgba(255,255,255,0.8) 13%);
+    }
+    .signup-page-content{
+        width: 90rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .singup-page-content-left {
+        border-bottom: 0.1rem solid #b1b1b1;
+        border-right: none;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .img-left-wrapper img{
+        margin: 0 2rem;
+    }
+    .singup-page-content-left h1{
+        font-size: 1.9rem;
+        margin-bottom: 2rem;
+    }
+    .singup-page-content-right{
+        padding: 2rem 0;
+    }
+    .singup-page-content-right h3{
+        margin-top: 2rem;
+    }
+    .singup-page-content-right .blue-btn{
+        width: 45rem;
+    }
+}
+@media (max-width:1250px){
+    .dropdown-menu{
+        padding-left: 10rem;
+        padding-right: 0;
+    }
+}
+@media (max-width:1150px){
+    html{
+        font-size: 60%;
+    }
+    .navbar{
+        width: 100%;
+        padding: 0 5rem;
+    }
+    .navbar-logo{
+        position: absolute; /*because it's a flex item we define its position manually*/
+        left: 45%;
+        transform: translateX(-50%,-50%);
+    }
+    .menu{
+        width: 11rem;
+        height: 4rem;
+        background-color: transparent;
+        border-radius: 3rem;
+        border: 0.1rem solid #fff;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        /* transform: translateX(17rem); */
+        visibility: visible;
+        transition: transform 0.6s cubic-bezier(1,0,0,1);
+        /*cubic-bezier allows us to create the custom transition.
+        here we make the transition slower at the beginning and then fast at the end*/
+    }
+    .change .menu{
+        transform: translateX(17rem); /*to move them to the right*/
+        position: fixed;
+        top: 2rem;
+        left: 6rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #000;
+    }
+    .menu-icon{
+        height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .line{
+        width: 2rem;
+        height: 0.1rem;
+        background-color: #fff;
+        transform-origin: left;
+    }
+    .change .line-1{
+        transform: rotate(45deg);
+        background-color: #000;
+    }
+    .change .line-2{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .change .line-3{
+        transform: rotate(-45deg);
+        background-color: #000;
+    }
+    .menu span{
+        font-size: 1.4rem;
+    }
+    .nav-list, .nav-dropdown-personal, .nav-dropdown-business{
+        position: fixed;
+        top: 0;
+        left: -21rem;
+        width: 21rem;
+        height: 100vh;
+        background: linear-gradient(to bottom, #032181, #094399,#04207c);
+        flex-direction: column;
+        padding-top: 2rem;
+        z-index: 200;
+        cursor: pointer;
+        transition: left 0.6s cubic-bezier(1,0,0,1);
+    }
+    .change .nav-list{
+        left: 0;
+    }
+    .nav-dropdown-personal, .nav-dropdown-business{
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        padding: 0.5rem;
+        justify-content: flex-start;
+    }
+    .dropdown-heading{
+        display: block;
+        visibility: visible;
+    }
+    .dropdown-heading a{
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+        width: 100%;
+    }
+    .dropdown-heading a i{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        transform: rotate(90deg);
+    }
+    .nav-dropdown-link-1{
+        font-size: 1.4em;
+    }
+    .nav-dropdown-link-2{
+        display: none;
+    }
+    .nav-list-item{
+        width: 100%;
+        height: auto;
+        margin: 0.4rem 0;
+    }
+    .nav-list-item:hover{
+        border-bottom: none;
+    }
+    .nav-list-link{
+        font-size: 1.2rem;
+    }
+    .nav-list-link i{
+        transform: rotate(-90deg);
+    }
+    .navbar-btns{
+        position: absolute; /*same here because they are flex items we define their positions manually*/
+        right: 5%;
+        transform: translateX(-50%,-50%);
+    }
+    .service-wrapper{
+        width: 80%;
+    }
+    .section-2-service{
+        width: 35rem;
+    }
+    .feature{
+        width: calc(100% / 2);
+        padding: 0 10rem;
+    }
+    .section-4-img-wrapper {
+        width: 70rem;
+    }
+    .section-heading{
+        margin-bottom: 10rem;
+    }
+}
+@media (max-width:900px) {
+    html{
+        font-size: 55%;
+    }
+    .section-4-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-4-img-wrapper {
+        width: 50rem;
+        margin: auto;
+    }
+    .section-4-img-wrapper img {
+        width: 70%;
+        align-items: center;
+    }
+    .section-4-list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-list{
+        margin-bottom: 1rem;
+    }
+    .copyright{
+        margin: 1.5rem 0;
+        font-size: 1rem;
+    }
+}
+@media (max-width:700px) {
+    .service-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+    }
+    .navbar-logo{
+        position: absolute; /*because it's a flex item we define its position manually*/
+        left: 40%;
+    }
+}
+@media (max-width:600px) {
+    html{
+        font-size: 50%;
+    }
+    .features{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .feature {
+        width: 100%;
+    }
+    .feature-paragraph{
+        font-size: 1.3rem;
+    }
+    .signup-page-top {
+        width: 60rem;
+    }
+}
+@media (max-width:500px){
+    html{
+        font-size: 45%;
+    }
+    .navbar-logo{
+        display: none;
+    }
+    .banner-heading{
+        font-size: 5rem;
+    }
+    .banner-prgh{
+        width: 100%;
+    }
+    .section-heading{
+        font-size: 2.8rem;
+    }
+    .section-3-heading{
+        font-size: 3rem;
+    }
+    .footer-top{
+        width: 90%;
+    }
+    .signup-page-top {
+        width: 45rem;
+    }
+}
+@media (max-width:400px){
+    html{
+        font-size: 40%;
+    }
+    .menu{
+        width: 6rem;
+    }
+    .menu span{
+        display: none;
+    }
+}
